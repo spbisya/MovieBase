@@ -21,17 +21,19 @@
             android:layout_marginLeft="82dp"
             android:layout_marginTop="5dp"
             android:ems="10"
-            android:inputType="text"></EditText>
+            android:inputType="text">
+            <requestFocus />
+        </EditText>
 
         <EditText
             android:id="@+id/editTextEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/editTextStreet"
-            android:layout_below="@+id/editTextStreet"
-            android:layout_marginTop="22dp"
             android:ems="10"
-            android:inputType="textEmailAddress" />
+            android:inputType="number|textEmailAddress"
+            android:layout_below="@+id/editTextStreet"
+            android:layout_alignLeft="@+id/editTextStreet"
+            android:layout_alignStart="@+id/editTextStreet" />
 
         <TextView
             android:id="@+id/textView1"
@@ -42,14 +44,16 @@
             android:text="@string/name"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
-        <Button
+        <ImageButton
             android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="run"
             android:text="@string/save"
             android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_save_black_48dp"
+            android:background="#00ffffff" />
 
         <TextView
             android:id="@+id/textView2"
@@ -85,9 +89,9 @@
             android:layout_alignLeft="@+id/editTextName"
             android:layout_below="@+id/editTextPhone"
             android:ems="10"
-            android:inputType="text">
+            android:inputType="text|number">
 
-            <requestFocus />
+
         </EditText>
 
         <EditText
@@ -97,7 +101,7 @@
             android:layout_alignLeft="@+id/editTextStreet"
             android:layout_below="@+id/editTextName"
             android:ems="10"
-            android:inputType="phone|text" />
+            android:inputType="text" />
 
         <TextView
             android:id="@+id/textView3"
@@ -113,10 +117,36 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textEmailAddress"
-            android:layout_alignStart="@+id/editTextEmail"
+            android:inputType="text|textEmailAddress"
             android:layout_below="@+id/editTextEmail"
-            android:layout_marginTop="22dp" />
+            android:layout_alignLeft="@+id/editTextEmail"
+            android:layout_alignStart="@+id/editTextEmail" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/linearLayout">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton"
+                android:layout_weight="1"
+                android:src="@drawable/ic_mode_edit_black_48dp"
+                android:background="#00ffffff" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton2"
+                android:layout_weight="1"
+                android:src="@drawable/ic_delete_forever_black_48dp"
+                android:background="#00ffffff" />
+        </LinearLayout>
 
     </RelativeLayout>
 </ScrollView>

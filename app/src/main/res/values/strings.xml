@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Films Base</string>
+    <string name="app_name">Movie Base</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="Add_New">Add New</string>
@@ -13,7 +13,7 @@
     <string name="street">Season</string>
     <string name="country">Time</string>
     <string name="save">Save</string>
-    <string name="deleteContact">Are you sure, you want to delete it.</string>
+    <string name="deleteContact">Are you sure you want to delete it?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
 </resources>

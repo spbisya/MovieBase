@@ -10,13 +10,15 @@ import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.os.Environment;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class DBHelper extends SQLiteOpenHelper {
 
-    public static final String DATABASE_NAME = "MyDBName.db";
+    public static final String DATABASE_NAME ="MovieBase.db";
     public static final String CONTACTS_TABLE_NAME = "contacts";
     public static final String CONTACTS_COLUMN_ID = "id";
     public static final String CONTACTS_COLUMN_NAME = "name";
@@ -99,6 +101,21 @@ public class DBHelper extends SQLiteOpenHelper {
 
         while (res.isAfterLast() == false) {
             array_list.add(res.getString(res.getColumnIndex(CONTACTS_COLUMN_NAME)));
+            res.moveToNext();
+        }
+        return array_list;
+    }
+
+    public ArrayList<Integer> getAllId() {
+        ArrayList<Integer> array_list = new ArrayList<>();
+
+        //hp = new HashMap();
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("select * from contacts", null);
+        res.moveToFirst();
+
+        while (res.isAfterLast() == false) {
+            array_list.add(res.getInt(res.getColumnIndex("id")));
             res.moveToNext();
         }
         return array_list;
