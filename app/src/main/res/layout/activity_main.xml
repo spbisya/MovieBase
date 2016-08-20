@@ -1,52 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="#ffffff">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:paddingTop="10dp">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:src="@drawable/fil"
-        android:cropToPadding="false"
-        android:layout_below="@+id/button"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
-    <TextView
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Seems there are no any watched films yet.\nPress button and add your films."
-        android:id="@+id/textView"
-        android:layout_below="@+id/imageView"
-        android:layout_alignParentRight="false"
-        android:layout_alignParentEnd="true"
-        android:textIsSelectable="false"
-        android:gravity="center"
-        android:layout_alignParentBottom="false"
-        android:textColor="#c3c3c3" />
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        app:title="Movies List"
+        app:titleTextColor="#FFFFFF" />
 
-    <ListView
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/listView1"
-        android:dividerHeight="0dp"
-        android:divider="#000dff"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="#FFFFFF">
 
-    <ImageButton
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button"
-        android:src="@drawable/ic_add_circle_outline_black_48dp"
-        android:background="#00ffffff"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:divider="#000dff"
+            android:dividerHeight="0dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/empty_screen"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#c3c3c3"
+            android:textIsSelectable="false" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_add_black_48dp"
+            android:transitionName="@string/view_name"
+            app:elevation="24dp"
+            app:layout_anchor="@id/listView1"
+            app:layout_anchorGravity="bottom|right|end" />
+    </RelativeLayout>
+
 
 </RelativeLayout>

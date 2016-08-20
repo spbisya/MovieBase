@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/imageContainer"
+            android:layout_weight="3">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:id="@+id/first">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="6"
+                    app:srcCompat="@drawable/cloud"
+                    android:id="@+id/imageView" />
+
+                <TextView
+                    android:text="Unlimited storage in cloud"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/banner"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:textColorHighlight="#000000" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:id="@+id/second"
+                android:alpha="0">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="6"
+                    app:srcCompat="@drawable/movie"
+                    android:id="@+id/imageViewS"/>
+
+                <TextView
+                    android:text="Log in to save all your films"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/bannerS"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:textColorHighlight="#000000" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_weight="4"
+            android:layout_height="0dp"
+            android:id="@+id/loginContainer">
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/logins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/logins"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:visibility="invisible" />
+
+            <Button
+                android:text="Exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logins"
+                android:layout_alignRight="@+id/logins"
+                android:layout_alignEnd="@+id/logins"
+                android:id="@+id/logout"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

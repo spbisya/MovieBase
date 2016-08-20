@@ -16,4 +16,11 @@
     <string name="deleteContact">Are you sure you want to delete it?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="view_name">Fab</string>
+    <string name="signed_in_fmt">Signed in as %s</string>
+    <string name="web_client_id">948900744051-cclts174lmn125lard565gluhj3ut61i.apps.googleusercontent.com</string>
+    <string name="description">Hello! This app will help you to not forget your watched/ongoing films.\nRate me please if you want more features!\nLeave feedback in order to tell me about bugs in the app.</string>
+    <string name="quote">Cinema should make you forget you are sitting in a theater.</string>
+    <string name="author">Roman Polanski</string>
+    <string name="empty_screen">Here is no items yet. Add some or sync films from Cloud.</string>
 </resources>

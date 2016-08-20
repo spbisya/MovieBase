@@ -1,0 +1,150 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="82dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:inputType="text">
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editSeries"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editSeason"
+        android:layout_alignStart="@+id/editSeason"
+        android:layout_below="@+id/editSeason"
+        android:ems="10"
+        android:inputType="number|textEmailAddress" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editName"
+        android:layout_alignParentLeft="true"
+        android:text="@string/name"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editSeries"
+        android:layout_alignLeft="@+id/textView1"
+        android:text="@string/email"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editPart"
+        android:layout_alignLeft="@+id/textView1"
+        android:text="@string/phone"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editSeries"
+        android:layout_alignLeft="@+id/textView5"
+        android:text="@string/street"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editSeason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editName"
+        android:layout_below="@+id/editPart"
+        android:ems="10"
+        android:inputType="text|number">
+
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/editPart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editSeason"
+        android:layout_below="@+id/editName"
+        android:ems="10"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTime"
+        android:layout_alignParentStart="true"
+        android:text="@string/country"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editSeries"
+        android:layout_alignStart="@+id/editSeries"
+        android:layout_below="@+id/editSeries"
+        android:ems="10"
+        android:inputType="text|textEmailAddress" />
+
+    <ImageButton
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00ffffff"
+        android:onClick="run"
+        android:src="@drawable/ic_save_black_48dp"
+        android:text="@string/save"
+        android:transitionName="@string/view_name"
+        android:layout_below="@+id/editTime"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="10dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:paddingTop="10dp">
+
+        <ImageButton
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00ffffff"
+            android:src="@drawable/ic_mode_edit_black_48dp" />
+
+        <ImageButton
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00ffffff"
+            android:src="@drawable/ic_delete_forever_black_48dp" />
+    </LinearLayout>
+
+</RelativeLayout>

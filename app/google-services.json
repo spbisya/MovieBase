@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "948900744051",
+    "firebase_url": "https://movie-base-a33d3.firebaseio.com",
+    "project_id": "movie-base-a33d3",
+    "storage_bucket": "movie-base-a33d3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:948900744051:android:65969a9ee74cabbc",
+        "android_client_info": {
+          "package_name": "com.okunev.moviebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "948900744051-jrn046r9d5hoe1ljv7o8l03o7d7gbdp0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.okunev.moviebase",
+            "certificate_hash": "18EF9ED35B4D48B325A9DCAE3001722900D1D73B"
+          }
+        },
+        {
+          "client_id": "948900744051-gfd26f0g5hlfjbo5s69j3vu15rqcjhbc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.okunev.moviebase",
+            "certificate_hash": "0BD52D8F7A79670F381FB6C097ED72BCB64211D7"
+          }
+        },
+        {
+          "client_id": "948900744051-cclts174lmn125lard565gluhj3ut61i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjYXQuGt2YNaCFZetET7sg3x1KZaRHuGM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "948900744051-cclts174lmn125lard565gluhj3ut61i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
